@@ -28,4 +28,5 @@ Route::prefix('v1/package')->middleware('auth:sanctum')->group(function(){
     Route::get('/{id}', [PackageController::class, 'detailPackage']);
     Route::put('/{id}', [PackageController::class, 'updatePackage']);
     Route::patch('/{id}', [PackageController::class, 'patchPackage']);
+    Route::delete('/{id}', [PackageController::class, 'destroy']);
 });

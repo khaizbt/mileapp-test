@@ -129,4 +129,12 @@ class PackageController extends Controller
         return response()
         ->json(['message' => 'patch data berhasil', "result" => $data]);
     }
+
+    public function destroy($id) {
+        $delete = Package::where('_id', $id)->delete();
+
+        return response()
+        ->json(['message' => 'delete data berhasil', "result" => null]);
+
+    }
 }
