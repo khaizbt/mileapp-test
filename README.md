@@ -33,7 +33,7 @@ use Jenssegers\Mongodb\Eloquent\Model;
 
 ```
 
-Restore file binary Database yang sudah dikirimkan melalui email atau bisa diakses pada [link ini](https://github.com) kemudian jalankan perintah berikut(Untuk Windows), Jika OS bukan Windows bisa lihat dokumentasi [disini](https://docs.mongodb.com/database-tools/mongorestore/)
+Restore file binary Database yang sudah dikirimkan melalui email atau bisa diakses pada [link ini](https://github.com/khaizbt/mileapp-test/blob/main/mileapp-db) kemudian jalankan perintah berikut(Untuk Windows), Jika OS bukan Windows bisa lihat dokumentasi [disini](https://docs.mongodb.com/database-tools/mongorestore/)
 
 ```
 mongorestore.exe --archive="mileapp-db" --nsFrom="mileapp.*" --nsTo="mileAppBackup.*" 
@@ -47,7 +47,7 @@ php artisan key:generate
 
 ```
 
-Untuk dapat mengakses resource packages, kamu harus login terlebih dahulu
+Untuk dapat mengakses resource packages, kamu harus login terlebih dahulu pada postman (Login Request)
 ```bash
 email: user@mailtrap.io
 password: password123
@@ -55,10 +55,10 @@ password: password123
 
 ## Endpoint Access
 Untuk mengakses Endpointnya kamu bisa melakukannya di link berikut [POSTMAN](https://documenter.getpostman.com/view/12945074/UVeJM5yf#6e3e22fb-7101-44ce-8b1b-2f3c172b5437)
-atau mengimport manual file dengan nama "Mileapp.postman_collection.json" yang ada di file directory dari program
+atau mengimport manual file dengan nama "Mileapp.postman_collection.json" yang sudah dikirimkan via email
 
 ## Unit Testing
-Sebelum menjalankan Unit Testing, Diharapkan untuk menyiapkan data valid(karena Unit Testing datanya masih Hard Code) seperti token beserta Package ID, Customer ID, Location ID, Connote ID untuk dijalankan pada File Unit Testing([PackageCRUDTest](https://github.com/khaizbt/mileapp-test/tree/main/test/Feature/PackageCRUDTest.php)) ketika sudah selesai, jalankan :
+Sebelum menjalankan Unit Testing, Diharapkan untuk menyiapkan data valid(karena Unit Testing datanya masih Hard Code) seperti token beserta Package ID, Customer ID, Location ID, Connote ID untuk dijalankan pada File Unit Testing([PackageCRUDTest](https://github.com/khaizbt/mileapp-test/blob/main/tests/Feature/PackageCRUDTest.php)) ketika sudah selesai, jalankan :
 ```bash
 php artisan test
 ```
