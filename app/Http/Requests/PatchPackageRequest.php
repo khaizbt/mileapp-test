@@ -6,7 +6,7 @@ use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Http\Exceptions\HttpResponseException;
 
-class InputPackageRequest extends FormRequest
+class PatchPackageRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -26,11 +26,7 @@ class InputPackageRequest extends FormRequest
     public function rules()
     {
         return [
-            "customer_origin" =>"required|exists:customers,_id",
-            "customer_destination"  =>"required|exists:customers,_id",
-            "transsaction_value" => "required|min:4",
-            "location_code" => "required|exists:locations,_id",
-            "connote_code" => "required|exists:connotes,_id"
+            "transaction_code" => "required"
         ];
     }
 
@@ -42,16 +38,5 @@ class InputPackageRequest extends FormRequest
     public function validationData()
     {
         return $this->json()->all();
-    }
-
-    public function attributes()
-    {
-        return [
-            "customer_origin" =>"Customer Pengirim",
-            "customer_destination"  =>"Customer Penerima",
-            "transsaction_value" => "Biaya Pengiriman",
-            "location_code" => "Lokasi",
-            "connote_code" => "Connote"
-        ];
     }
 }

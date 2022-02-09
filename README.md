@@ -16,6 +16,18 @@ Berikut merupakan langah-langkah untuk instalasinya
 git clone https://github.com/khaizbt/mileapp-test.git
 cd mileapp-test
 ```
+
+*karena authentikasi memakai sanctum dan defaultnya tidak menggunakan MongoDB maka kamu harus mengubah /vendor/laravel/sanctum/src/SanctumServiceProvider*
+
+Ubah dari
+```bash
+use Illuminate\Database\Eloquent\Model;
+```
+ke 
+```bash
+use Jenssegers\Mongodb\Eloquent\Model;
+
+```
 *ganti .env sesuai dengan credential mongodb kamu lalu jalankan perintah berikut*
 ```bash
 composer install

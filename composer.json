@@ -12,7 +12,8 @@
         "laravel/framework": "^8.75",
         "laravel/passport": "^10.3",
         "laravel/sanctum": "^2.14",
-        "laravel/tinker": "^2.5"
+        "laravel/tinker": "^2.5",
+        "orangehill/iseed": "^3.0"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
@@ -27,7 +28,10 @@
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/"
-        }
+        },
+        "files": [
+            "app/Helpers/ResponseFormatter.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {
