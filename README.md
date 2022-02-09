@@ -17,7 +17,11 @@ git clone https://github.com/khaizbt/mileapp-test.git
 cd mileapp-test
 ```
 
-*karena authentikasi memakai sanctum dan defaultnya tidak menggunakan MongoDB maka kamu harus mengubah /vendor/laravel/sanctum/src/SanctumServiceProvider*
+*karena authentikasi memakai sanctum dan defaultnya tidak menggunakan MongoDB maka kamu harus mengubah
+
+```bash
+ /vendor/laravel/sanctum/src/SanctumServiceProvider*
+ ```
 
 Ubah dari
 ```bash
@@ -28,11 +32,18 @@ ke
 use Jenssegers\Mongodb\Eloquent\Model;
 
 ```
-*ganti .env sesuai dengan credential mongodb kamu lalu jalankan perintah berikut*
+
+Restore file binary Database yang sudah dikirimkan melalui email atau bisa diakses pada [link ini](https://github.com) kemudian jalankan perintah berikut(Untuk Windows), Jika OS bukan Windows bisa lihat dokumentasi [disini](https://docs.mongodb.com/database-tools/mongorestore/)
+
+```
+mongorestore.exe --archive="mileapp-db" --nsFrom="mileapp.*" --nsTo="mileAppBackup.*" 
+```
+
+
+*ganti .env sesuai dengan credential mongodb kamu lalu jalankan perintah berikut(disini saya memakai nama database mileAppBackup dari hasil restore database*
 ```bash
 composer install
 php artisan key:generate
-php artisan migrate:fresh --seed
 
 ```
 
