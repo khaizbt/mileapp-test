@@ -5,7 +5,7 @@
 This is repositories for API MileApp Backend Test
 
 # Development Setup
-* [php] - base language
+* [php] - base language (PHP Version 8.0)
 * [laravel] - framework for code 
 * [laravel-mongodb] - ORM MongoDB for Laravel
 * [mongodb] - Driver database yang digunakan 
@@ -45,6 +45,13 @@ password: password123
 ## Endpoint Access
 Untuk mengakses Endpointnya kamu bisa melakukannya di link berikut [POSTMAN](https://documenter.getpostman.com/view/12945074/UVeJM5yf#6e3e22fb-7101-44ce-8b1b-2f3c172b5437)
 atau mengimport manual file dengan nama "Mileapp.postman_collection.json" yang ada di file directory dari program
+
+## Unit Testing
+Sebelum menjalankan Unit Testing, Diharapkan untuk menyiapkan data valid(karena Unit Testing datanya masih Hard Code) seperti token beserta Package ID, Customer ID, Location ID, Connote ID untuk dijalankan pada File Unit Testing([PackageCRUDTest](https://github.com/khaizbt/mileapp-test/tree/main/test/Feature/PackageCRUDTest.php)) ketika sudah selesai, jalankan :
+```bash
+php artisan test
+```
+
 
 ### Thanks a lot
 terimakasih team mileapp yang sudah mau membaca dokumentasi singkat ini, mohon maaf jika masih banyak kekurangan.
