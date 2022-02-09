@@ -20,7 +20,7 @@ cd mileapp-test
 *karena authentikasi memakai sanctum dan defaultnya tidak menggunakan MongoDB maka kamu harus mengubah
 
 ```bash
- /vendor/laravel/sanctum/src/SanctumServiceProvider*
+ /vendor/laravel/sanctum/src/SanctumServiceProvider.php
  ```
 
 Ubah dari
